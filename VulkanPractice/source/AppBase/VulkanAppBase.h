@@ -15,6 +15,9 @@
 class VulkanAppBase
 {
 public:
+private:
+	VkInstance _instance;
+public:
 	VulkanAppBase();
 	virtual ~VulkanAppBase();
 

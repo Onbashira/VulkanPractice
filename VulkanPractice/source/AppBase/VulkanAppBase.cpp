@@ -42,6 +42,14 @@ void VulkanAppBase::DebugLayerInit()
 
 	//レイヤ、検証レイヤの有効化
 	const char* layers[] = { "VK_LAYER_LUNARG_standard_validation" };
+	VkInstanceCreateInfo ci = {};
+	ci.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
+	ci.enabledLayerCount = 1;
+	ci.ppEnabledLayerNames = layers;
+	ci.enabledExtensionCount = extensions.size();
+	ci.ppEnabledExtensionNames = extensions.data();
+	ci.pApplicationInfo = &appInfo;
 
+	vkCreateInstance(&ci, nullptr, &_instance);
 
 }

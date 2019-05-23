@@ -121,10 +121,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\Device\LogicalDevice.cpp" />
+    <ClCompile Include="source\Device\PhysicsDevice.cpp" />
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\AppBase\VulkanAppBase.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\Device\LogicalDevice.h" />
+    <ClInclude Include="source\Device\PhysicsDevice.h" />
     <ClInclude Include="source\AppBase\VulkanAppBase.h" />
   </ItemGroup>
   <ItemGroup>
